@@ -1,0 +1,41 @@
+/* Default styles for larger screens */
+.stock-table-container {
+    width: 80%;
+    margin: 0 auto;
+}
+  
+  .stock-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .stock-type{
+    background-color: rgb(213, 213, 240);
+    margin: 10px;
+    width: 20px;
+    border-radius: 8px;
+}
+  
+  .stock-table th, .stock-table td {
+    cursor: pointer;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  .stock-table-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media screen and (max-width: 600px) {
+    .stock-table-container {
+      width: 100%;
+    }
+  
+    .stock-table th, .stock-table td {
+      padding: 5px;
+      font-size: 14px;
+    }
+  }
+  
