@@ -19,8 +19,25 @@
     cursor: pointer;
     padding: 10px;
     text-align: left;
+    border-width: auto;
     border-bottom: 1px solid #ddd;
   }
+ 
+
+.stock-table tbody tr[draggable="true"]:hover {
+  background-color: #f0f0f0; /* Change the hover background color as desired */
+}
+
+/* Styling for the dragged row */
+.stock-table tbody tr[aria-grabbed="true"] {
+  background-color: #e0e0e0; /* Change the dragged row background color as desired */
+}
+
+/* Styling for the drop target row */
+.stock-table tbody tr[aria-dropeffect="move"] {
+  background-color: #d0d0d0; /* Change the drop target background color as desired */
+}
+
   .stock-table-header{
     display: flex;
     justify-content: center;
