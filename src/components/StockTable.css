@@ -1,58 +1,62 @@
-/* Default styles for larger screens */
 .stock-table-container {
-    width: 80%;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
+  display: flex; 
 }
-  
-  .stock-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  .stock-type{
-    background-color: rgb(213, 213, 240);
-    margin: 10px;
-    width: 20px;
-    border-radius: 8px;
+
+.left-table-container {
+  flex: 7; 
+  padding-right: 20px; 
 }
-  
-  .stock-table th, .stock-table td {
-    cursor: pointer;
-    padding: 10px;
-    text-align: left;
-    border-width: auto;
-    border-bottom: 1px solid #ddd;
-  }
- 
+
+.stock-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stock-type {
+  background-color: rgb(213, 213, 240);
+  margin: 10px;
+  width: 20px;
+  border-radius: 8px;
+}
+
+.stock-table th,
+.stock-table td {
+  cursor: pointer;
+  padding: 16px;
+  text-align: center;
+}
 
 .stock-table tbody tr[draggable="true"]:hover {
-  background-color: #f0f0f0; /* Change the hover background color as desired */
+  background-color: #f0f0f0;
 }
 
-/* Styling for the dragged row */
-.stock-table tbody tr[aria-grabbed="true"] {
-  background-color: #e0e0e0; /* Change the dragged row background color as desired */
+.right-empty {
+  flex: 3; 
 }
 
-/* Styling for the drop target row */
-.stock-table tbody tr[aria-dropeffect="move"] {
-  background-color: #d0d0d0; /* Change the drop target background color as desired */
+.stock-table-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-  .stock-table-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media screen and (max-width: 600px) {
+  .stock-table-container {
+    width: 100%;
+    flex-direction: column; 
   }
-  
-  /* Responsive styles for smaller screens */
-  @media screen and (max-width: 600px) {
-    .stock-table-container {
-      width: 100%;
-    }
-  
-    .stock-table th, .stock-table td {
-      padding: 5px;
-      font-size: 14px;
-    }
+
+  .left-table-container,
+  .right-empty {
+    width: 100%; 
+    padding-right: 0; 
   }
-  
+
+  .stock-table th,
+  .stock-table td {
+    padding: 5px;
+    font-size: 14px;
+  }
+}
