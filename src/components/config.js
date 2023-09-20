@@ -4,7 +4,6 @@ export const stockConfig = [
     type: "NSE",
     value: 150.25,
   },
-
   {
     name: "GOOGL",
     type: "BSE",
@@ -26,12 +25,6 @@ export const stockConfig = [
     value: 750.0,
   },
  
-  {
-    name: "ExStock1",
-    type: "NSE",
-    value: 750.0,
-  },
+
  
-
-
 ];

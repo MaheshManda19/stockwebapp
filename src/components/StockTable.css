@@ -5,8 +5,11 @@
 }
 
 .left-table-container {
-  flex: 7; 
-  padding-right: 20px; 
+  flex: 3; 
+}
+.right-empty {
+  flex: 7;
+  padding-right: 300px;
 }
 
 .stock-table {
@@ -15,7 +18,7 @@
 }
 
 .stock-type {
-  background-color: rgb(213, 213, 240);
+  background-color: rgb(227, 244, 242);
   margin: 10px;
   width: 20px;
   border-radius: 8px;
@@ -26,15 +29,14 @@
   cursor: pointer;
   padding: 16px;
   text-align: center;
+  border-bottom: 1px solid rgb(236, 229, 208);
 }
 
 .stock-table tbody tr[draggable="true"]:hover {
   background-color: #f0f0f0;
 }
 
-.right-empty {
-  flex: 3; 
-}
+
 
 .stock-table-header {
   display: flex;
